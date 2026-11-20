@@ -91,7 +91,8 @@
 
   <section class="news">
     <h2 class="cal">Um guia novo por semana, <span class="serif">direto no seu e-mail.</span></h2>
-    <form onsubmit="return false"><input type="email" placeholder="Seu melhor e-mail"><button class="pill lime" style="border:0">Quero receber →</button></form>
+    <form data-newsletter novalidate><input type="email" required aria-label="Seu e-mail" placeholder="Seu melhor e-mail"><button class="pill lime" style="border:0">Quero receber →</button></form>
+  <p class="news-lgpd">Ao se inscrever, você aceita receber e-mails da Farmácia Bioflora. Dá para sair a qualquer momento.</p>
   </section>
   <footer class="foot">
     <span>© 2026 Farmácia Bioflora · R. Francisco Masseli, 426 · Centro · Itajubá-MG</span>
@@ -99,4 +100,5 @@
     <span>RT: Wanessa · CRF-MG 12.629</span>
   </footer>
 </div>
+<script src="/newsletter.js" defer></script>
 </body></html>
