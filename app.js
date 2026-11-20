@@ -65,3 +65,9 @@
 
 // nav fica "vidro" ao rolar
 (function(){var n=document.querySelector(".nav");if(!n)return;var f=function(){n.classList.toggle("stuck",scrollY>40)};addEventListener("scroll",f,{passive:true});f();})();
+
+// Sumário: destaca a seção que está na tela
+(function(){var links=[].slice.call(document.querySelectorAll('.toc a'));if(!links.length||!('IntersectionObserver' in window))return;
+var mapa={};links.forEach(function(a){var id=a.getAttribute('href').slice(1),h=document.getElementById(id);if(h)mapa[id]=a;});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.remove('on')});var a=mapa[e.target.id];if(a)a.classList.add('on');}})},{rootMargin:'-120px 0px -65% 0px'});
+Object.keys(mapa).forEach(function(id){io.observe(document.getElementById(id))});})();
