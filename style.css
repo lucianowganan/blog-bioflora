@@ -1,6 +1,6 @@
 :root{
   --wine:#9f1237;--wine-dk:#5e0a21;--wine-deep:#2a0610;
-  --blush:#f6e7ea;--rose:#e9c6cf;--lime:#e4f06b;--sage:#3f4a3a;
+  --blush:#f6e7ea;--rose:#e9c6cf;--lime:#f4c9d4;--sage:#3b0a18;
   --ink:#1c1416;--mut:#76696c;--line:#e7dfe1;--paper:#f4f0ee;--card:#fff;
   --r:32px;
 }
@@ -9,7 +9,7 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
-.serif{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400}
+.serif{font-family:inherit;font-style:normal;font-weight:inherit;color:var(--wine)}
 .cal{font-family:"Cal Sans",Inter,sans-serif;font-weight:400}
 
 /* moldura */
@@ -179,3 +179,30 @@ details p{margin:0 0 16px;color:var(--mut)}
 
 .news-msg{grid-column:1/-1;margin:0;color:var(--lime);font-size:15px;min-height:1em}
 .news-lgpd{grid-column:1/-1;margin:0;font-size:12px;opacity:.6}
+
+/* ===== Ajustes de design (v2): 1 família de título, logo à esquerda, mais respiro ===== */
+.nav{padding:8px 10px 16px;gap:10px}
+.nav .brand{order:-1;margin-right:auto;display:flex;align-items:center}
+.nav .logo{margin:0;height:38px}
+.nav .grp.l{order:0}
+.nav .grp.r{order:1}
+.hero{min-height:520px}
+.hero-l{padding:56px}
+.hero h1{font-size:clamp(38px,4.8vw,64px);line-height:1.04;letter-spacing:-.5px}
+.hero h1 .serif,.ahero h1 .serif,.news h2 .serif{color:var(--lime)}
+.hero p{font-size:17px;max-width:460px}
+.sec{padding:88px 48px}
+.sec-h{margin-bottom:36px}
+.sec-h h2{font-size:clamp(30px,3.4vw,46px)}
+.words>div{height:120px;font-size:clamp(24px,3vw,42px)}
+.words .w2{color:#fff}
+.tcard h3{font-size:26px}
+.edit .quote blockquote{font-size:clamp(24px,2.6vw,34px);line-height:1.25}
+.pill.lime{color:var(--wine-dk);font-weight:600}
+.tldr{background:var(--blush);border-left:4px solid var(--wine)}
+.by .av{color:var(--wine-dk)}
+.ahero .l{background:linear-gradient(160deg,var(--wine),var(--sage))}
+.ahero .r{background:radial-gradient(100% 80% at 70% 20%,#f9e3e9,transparent 60%),#f3ece9}
+@media(max-width:900px){.hero-l{padding:30px}.sec{padding:56px 12px}.nav .grp.l{display:none}}
+.search input{min-width:0}
+.search .pill{flex:none}
