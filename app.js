@@ -71,3 +71,9 @@
 var mapa={};links.forEach(function(a){var id=a.getAttribute('href').slice(1),h=document.getElementById(id);if(h)mapa[id]=a;});
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.remove('on')});var a=mapa[e.target.id];if(a)a.classList.add('on');}})},{rootMargin:'-120px 0px -65% 0px'});
 Object.keys(mapa).forEach(function(id){io.observe(document.getElementById(id))});})();
+
+// Botão "voltar ao topo"
+(function(){var b=document.createElement('button');b.className='topo';b.type='button';b.setAttribute('aria-label','Voltar ao início da página');
+b.innerHTML='<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+document.body.appendChild(b);b.addEventListener('click',function(){scrollTo({top:0,behavior:'smooth'})});
+var f=function(){b.classList.toggle('on',scrollY>600)};addEventListener('scroll',f,{passive:true});f();})();

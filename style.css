@@ -327,3 +327,52 @@ p,li,summary{text-wrap:pretty}
 .ad-v .txt b,.ad-v .txt .t{text-shadow:0 1px 12px rgba(0,0,0,.25)}
 .ad-v{min-height:360px}
 .ad-v img{width:50%;top:30px;right:-10px}
+
+/* ===== v5: banners com produto recortado; botão nunca sobre a imagem ===== */
+.ad{display:flex!important;gap:16px;padding:22px!important;min-height:0!important}
+.ad .rot{position:static;display:block;margin-bottom:8px}
+.ad .txt{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;flex:1;min-width:0}
+.ad .cta-ad{margin-top:auto;padding:10px 16px}
+.ad .foto{position:relative;flex:none;display:flex;align-items:flex-end;justify-content:center}
+.ad .foto img{position:static!important;transform:none!important;width:auto!important;height:100%!important;max-height:100%;border-radius:0!important;background:none!important;filter:drop-shadow(0 14px 18px rgba(0,0,0,.35));transition:transform .4s}
+.ad:hover .foto img{transform:translateY(-4px) rotate(-3deg)!important}
+.ad-v{flex-direction:column-reverse!important;height:380px}
+.ad-v .foto{height:170px}
+.ad-v .txt .t{margin:6px 0 14px}
+.ad-h{flex-direction:row!important;align-items:stretch!important;height:180px;padding:24px 32px!important}
+.ad-h .txt{max-width:none}
+.ad-h .txt .t{margin:6px 0 12px}
+.ad-h .foto{height:100%;width:30%}
+.ad-h .foto img{height:118%!important;margin-bottom:-24px}
+.ad.vinho .foto{display:none}
+@media(max-width:900px){.ad-h{height:auto;flex-direction:row!important}.ad-h .foto{width:34%;height:150px;display:flex}.ad-h .foto img{height:100%!important;margin:0}}
+
+/* Estrelas com nota parcial (--v de 0 a 5) */
+.stars{display:inline-block;font-size:22px;letter-spacing:2px;line-height:1;
+  background:linear-gradient(90deg,#f2b01e calc(var(--v) / 5 * 100%),rgba(59,10,24,.18) 0);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.ahero .by .stars{background:linear-gradient(90deg,#f6c445 calc(var(--v) / 5 * 100%),rgba(255,255,255,.3) 0);-webkit-background-clip:text;background-clip:text;font-size:20px}
+.ahero.sobre .by .av{font-family:"Cal Sans",Inter,sans-serif;font-size:15px}
+.numeros .stars{margin-top:2px}
+
+/* Newsletter no celular: sem estourar a tela */
+.news form{max-width:100%;min-width:0}
+.news input{min-width:0;width:100%}
+@media(max-width:700px){
+  .news{padding:28px 20px;gap:20px}
+  .news form{flex-direction:column;border-radius:24px;gap:8px;padding:8px}
+  .news input{height:52px;padding:0 16px}
+  .news form .pill.lime{width:100%;justify-content:center;height:54px}
+}
+
+/* Voltar ao topo */
+.topo{position:fixed;right:20px;bottom:20px;z-index:30;width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.7);cursor:pointer;display:grid;place-items:center;color:var(--wine);
+  background:linear-gradient(135deg,rgba(255,255,255,.7),rgba(255,255,255,.35));-webkit-backdrop-filter:blur(16px) saturate(180%);backdrop-filter:blur(16px) saturate(180%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 12px 30px -10px rgba(59,10,24,.45);opacity:0;transform:translateY(12px);pointer-events:none;transition:all .3s}
+.topo.on{opacity:1;transform:none;pointer-events:auto}
+.topo:hover{background:var(--wine);color:#fff}
+.topo svg{width:20px;height:20px;transform:rotate(-90deg)}
+.numeros span.stars,.ahero .by span.stars{color:transparent!important;font-size:24px}
+.ad-v.vinho{height:240px}
+.ad-arte{padding:0!important;height:auto!important;display:block!important;background:none!important}
+.ad-arte img{position:static!important;display:block;width:100%;height:auto;border-radius:24px}
