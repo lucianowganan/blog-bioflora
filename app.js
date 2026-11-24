@@ -93,5 +93,11 @@ var rel=sh(resto).sort(function(a,b){var f=function(p){return p.tema.split(' ').
 var lista=[rel].concat(sh(resto.filter(function(p){return p!==rel})).slice(0,2));
 box.innerHTML='<h2 class="cal">Leia também</h2><div class="recs-g">'+lista.map(function(p){return '<a class="rec '+p.c+'" href="'+p.u+'"><span class="im"><img src="'+p.img+'" alt="" loading="lazy"></span><span class="rot">'+p.r+'</span><b>'+p.t+'</b><span class="vai">Ler artigo →</span></a>'}).join('')+'</div>';})();
 
-// Mapa do Google só carrega após clique (LGPD: sem cookies de terceiros antes do consentimento)
-(function(){document.querySelectorAll('.mapa-click').forEach(function(d){var go=function(e){if(e.target.closest('a'))return;var f=document.createElement('iframe');f.className='mapa';f.title='Mapa da Farmácia Bioflora';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';f.src=d.dataset.src;d.replaceWith(f)};d.addEventListener('click',go);d.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go(e)}})})})();
+// Aviso de cookies (Google Analytics só grava cookies após "Aceitar")
+(function(){var K='bf_cookies',v=null;try{v=localStorage.getItem(K)}catch(e){}
+function salvar(x){try{localStorage.setItem(K,x)}catch(e){}if(window.gtag)gtag('consent','update',{analytics_storage:x==='sim'?'granted':'denied'})}
+function abrir(){if(document.querySelector('.cookies'))return;var d=document.createElement('div');d.className='cookies';d.setAttribute('role','dialog');d.setAttribute('aria-label','Aviso de cookies');
+d.innerHTML='<p>Usamos cookies de análise (Google Analytics) para saber quais conteúdos ajudam mais. <a href="/privacidade#cookies">Saiba mais</a></p><div><button type="button" data-v="nao">Recusar</button><button type="button" data-v="sim" class="ok">Aceitar</button></div>';
+d.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;salvar(b.dataset.v);d.remove()});document.body.appendChild(d)}
+if(v!=='sim'&&v!=='nao')abrir();
+document.querySelectorAll('[data-cookies-reabrir]').forEach(function(l){l.addEventListener('click',function(e){e.preventDefault();abrir()})});})();

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Descadastro | Blog Bioflora</title>
+<meta name="description" content="Como o Blog da Farmácia Bioflora trata seus dados pessoais, cookies e e-mails, conforme a LGPD (Lei 13.709/2018).">
+<link rel="canonical" href="https://blog.farmaciabioflora.com.br/descadastro">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#9f1237">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icon-32.png">
+<link rel="apple-touch-icon" href="/img/icon-180.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Blog Bioflora">
+<meta property="og:title" content="Política de privacidade e cookies">
+<meta property="og:description" content="Como o Blog da Farmácia Bioflora trata seus dados pessoais, cookies e e-mails, conforme a LGPD (Lei 13.709/2018).">
+<meta property="og:url" content="https://blog.farmaciabioflora.com.br/descadastro">
+<meta property="og:image" content="https://blog.farmaciabioflora.com.br/img/og-bioflora.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+var _c=null;try{_c=localStorage.getItem('bf_cookies')}catch(e){}
+gtag('consent','default',{analytics_storage:_c==='sim'?'granted':'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+gtag('js',new Date());gtag('config','G-4SE518WVFV');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4SE518WVFV"></script>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<svg width="0" height="0" style="position:absolute"><symbol id="arr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="leaf" viewBox="0 0 100 100"><path d="M90 10C40 8 8 40 12 88c48 4 80-28 78-78z" fill="currentColor"/></symbol></svg>
+<div class="frame">
+  <nav class="nav">
+    <div class="grp l"><a class="pill" href="/">← Blog</a><a class="pill" href="sobre">Sobre nós</a></div>
+    <a class="brand" href="/"><img class="logo" src="https://images.yampi.me/assets/stores/farmacia-bioflora/uploads/logo/679bf55f33ccb.png" alt="Farmácia Bioflora"></a>
+    <div class="grp r"><a class="pill" href="https://www.farmaciabioflora.com.br/atendimento/pedidos-whatsapp">WhatsApp</a><a class="pill solid" href="https://www.farmaciabioflora.com.br/">Ir para a loja ↗</a></div>
+  </nav>
+
+    <header class="ahero sobre">
+    <div class="l">
+      <span class="eyebrow"><i></i>Newsletter do Blog Bioflora</span>
+      <h1 class="cal" id="sair-tit">Cancelando sua inscrição…</h1>
+      <div class="by"><div id="sair-txt">Só um instante.</div></div>
+    </div>
+    <div class="r foto"><img src="/img/fachada.jpg" alt="Fachada da Farmácia Bioflora em Itajubá"></div>
+  </header>
+  <div class="body" style="display:block;max-width:780px;margin:48px auto;padding:0 24px"><article class="prose"><p>Mudou de ideia? É só se inscrever de novo em qualquer página do <a href="/">blog</a>. Dúvidas sobre seus dados: <a href="/privacidade">política de privacidade</a>.</p></article></div>
+<script>
+(function(){var q=new URLSearchParams(location.search),e=q.get('e'),t=q.get('t'),T=document.getElementById('sair-tit'),X=document.getElementById('sair-txt');
+var fim=function(ok){T.innerHTML=ok?'Pronto, você <span class="serif">saiu da lista.</span>':'Não conseguimos <span class="serif">confirmar o link.</span>';X.textContent=ok?'Você não vai mais receber nossos e-mails. Obrigada por ter acompanhado o blog.':'Responda qualquer e-mail nosso com a palavra "sair" ou escreva para atendimento@farmaciabioflora.com.br.'};
+if(!e||!t)return fim(false);
+fetch('https://gbbjpltqmbhlfluqhrmg.supabase.co/functions/v1/blog-sair',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({e:e,t:t})}).then(function(r){return r.json()}).then(function(d){fim(d&&d.ok)}).catch(function(){fim(false)});})();
+</script>
+  <footer class="foot">
+    <span>© 2026 Farmácia Bioflora · R. Francisco Masseli, 426 · Centro · Itajubá-MG</span>
+    <img src="https://images.yampi.me/assets/stores/farmacia-bioflora/uploads/logo/679bf55f33ccb.png" alt="Bioflora">
+    <span>RT: Wanessa · CRF-MG 12.629 · <a href="/privacidade">Privacidade</a></span>
+  </footer>
+</div>
+<script src="/newsletter.js" defer></script>
+<script src="/app.js" defer></script>
+<script src="/banners.js" defer></script>
+</body></html>
