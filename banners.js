@@ -15,6 +15,8 @@
     { id: 'magnesio', rotulo: 'Da nossa loja', cor: 'laranja2', titulo: 'Blend 6 Magnésios', texto: 'Seis tipos de magnésio em uma cápsula.', cta: 'Ver na loja →',
       img: '/img/produtos/magnesio.png',
       url: 'https://www.farmaciabioflora.com.br/blend-6-magnesios/p' }
+    ,{ id: 'passiflora', rotulo: 'Da nossa loja', cor: 'roxo', titulo: 'Passiflora 300mg', texto: 'Extrato da flor do maracujá, para usar à noite.', cta: 'Ver na loja →',
+      img: '/img/produtos/passiflora.png', url: 'https://www.farmaciabioflora.com.br/passiflora-maracuja-300mg-com-60-capsulas/p' }
   ];
 
   function el(b, formato) {

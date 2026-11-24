@@ -416,3 +416,4 @@ p,li,summary{text-wrap:pretty}
 .ad-h .foto img{height:135%!important;margin-bottom:-56px}
 .ad-v .foto img{height:100%!important}
 @media(max-width:900px){.ad-h .foto img{height:120%!important;margin-bottom:-36px}}
+.ad.roxo{background:radial-gradient(120% 140% at 85% 30%,#b9a3e8 0,#6f4fc2 45%,#3a2370 100%)}
