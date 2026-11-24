@@ -92,3 +92,6 @@ var temas=eu?eu.tema.split(' '):['manipulacao'];
 var rel=sh(resto).sort(function(a,b){var f=function(p){return p.tema.split(' ').filter(function(t){return temas.indexOf(t)>-1}).length};return f(b)-f(a)})[0];
 var lista=[rel].concat(sh(resto.filter(function(p){return p!==rel})).slice(0,2));
 box.innerHTML='<h2 class="cal">Leia também</h2><div class="recs-g">'+lista.map(function(p){return '<a class="rec '+p.c+'" href="'+p.u+'"><span class="im"><img src="'+p.img+'" alt="" loading="lazy"></span><span class="rot">'+p.r+'</span><b>'+p.t+'</b><span class="vai">Ler artigo →</span></a>'}).join('')+'</div>';})();
+
+// Mapa do Google só carrega após clique (LGPD: sem cookies de terceiros antes do consentimento)
+(function(){document.querySelectorAll('.mapa-click').forEach(function(d){var go=function(e){if(e.target.closest('a'))return;var f=document.createElement('iframe');f.className='mapa';f.title='Mapa da Farmácia Bioflora';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';f.src=d.dataset.src;d.replaceWith(f)};d.addEventListener('click',go);d.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go(e)}})})})();

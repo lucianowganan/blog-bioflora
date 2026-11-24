@@ -466,3 +466,10 @@ p,li,summary{text-wrap:pretty}
 .ahero .r.capa-foto .float{background:rgba(255,255,255,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .ahero .r.capa-foto .float small{color:#4a3f42;opacity:1}
 .by .av.foto{background:url(/img/wanessa.jpg) center/cover;color:transparent}
+/* LGPD */
+.mapa-click{display:grid;place-items:center;cursor:pointer;background:linear-gradient(135deg,#efe7e3,#f8f3ee);text-align:center;padding:24px}
+.mapa-click span{display:flex;flex-direction:column;gap:6px;max-width:340px}
+.mapa-click b{display:inline-block;margin:0 auto;background:#1c1416;color:#fff;border-radius:999px;padding:12px 22px;font-size:15px}
+.mapa-click small{font-size:13px;color:#6f6366;line-height:1.45}
+.mapa-click small a,.news-lgpd a,.isca-lgpd a,.foot a{color:inherit;text-decoration:underline}
+.isca .isca-lgpd{margin:8px 0 0;font-size:12px;opacity:.8}
