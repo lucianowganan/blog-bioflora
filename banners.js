@@ -4,15 +4,15 @@
 (function () {
   var Y = 'https://images.yampi.me/assets/stores/farmacia-bioflora/uploads/images/';
   var BANNERS = [
-    { id: 'amora', rotulo: 'Da nossa loja', cor: 'rosa', titulo: 'Amora 600mg', texto: 'Extrato da folha, manipulado em Itajubá.', cta: 'Ver na loja →',
+    { id: 'amora', rotulo: 'Da nossa loja', cor: 'laranja', titulo: 'Amora 600mg', texto: 'Extrato da folha, manipulado em Itajubá.', cta: 'Ver na loja →',
       img: '/img/produtos/amora.png',
       url: 'https://www.farmaciabioflora.com.br/amora-600mg-alivia-os-sintomas-da-menopausa-6360117d90bd2/p' },
-    { id: 'melaleuca', rotulo: 'Da nossa loja', cor: 'verde', titulo: 'Enxaguatório com melaleuca', texto: 'Antisséptico na diluição certa para o dia a dia.', cta: 'Ver na loja →',
+    { id: 'melaleuca', rotulo: 'Da nossa loja', cor: 'prata', titulo: 'Enxaguatório com melaleuca', texto: 'Antisséptico na diluição certa para o dia a dia.', cta: 'Ver na loja →',
       img: '/img/produtos/melaleuca.png',
       url: 'https://www.farmaciabioflora.com.br/enxaguatorio-bucal-com-oe-melaleuca-antisseptico/p' },
     { id: 'whatsapp', rotulo: 'Bioflora', cor: 'vinho', titulo: 'Tem uma receita?', texto: 'Mande a foto pelo WhatsApp e receba o orçamento na hora.', cta: 'Pedir pelo WhatsApp →',
       img: null, url: 'https://www.farmaciabioflora.com.br/atendimento/pedidos-whatsapp' },
-    { id: 'magnesio', rotulo: 'Da nossa loja', cor: 'escuro', titulo: 'Blend 6 Magnésios', texto: 'Seis tipos de magnésio em uma cápsula.', cta: 'Ver na loja →',
+    { id: 'magnesio', rotulo: 'Da nossa loja', cor: 'laranja2', titulo: 'Blend 6 Magnésios', texto: 'Seis tipos de magnésio em uma cápsula.', cta: 'Ver na loja →',
       img: '/img/produtos/magnesio.png',
       url: 'https://www.farmaciabioflora.com.br/blend-6-magnesios/p' }
   ];

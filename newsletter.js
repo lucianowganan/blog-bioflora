@@ -18,7 +18,7 @@
         headers: { 'Content-Type': 'application/json', apikey: KEY, Authorization: 'Bearer ' + KEY },
         body: JSON.stringify({ p_email: input.value, p_origem: location.pathname })
       }).then(function (r) { return r.json(); }).then(function (d) {
-        if (d && d.ok) { f.reset(); msg.textContent = 'Pronto! Você vai receber nossos próximos guias. 💚'; }
+        if (d && d.ok) { f.reset(); msg.textContent = ''; var box = f.closest('.news'); if (box) box.classList.add('feito'); else msg.textContent = 'Inscrição confirmada! 💚'; }
         else { msg.textContent = 'Confira o e-mail digitado e tente de novo.'; }
       }).catch(function () { msg.textContent = 'Não conseguimos enviar agora. Tente de novo em instantes.'; })
         .finally(function () { btn.disabled = false; btn.textContent = t; });
