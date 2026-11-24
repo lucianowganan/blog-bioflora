@@ -81,10 +81,10 @@ var f=function(){b.classList.toggle('on',scrollY>600)};addEventListener('scroll'
 // Leia também: 1 artigo do mesmo tema + 2 aleatórios
 (function(){var box=document.querySelector('.recs');if(!box)return;
 var P=[
-{u:'/saude-das-articulacoes',t:'Saúde das articulações: o guia completo',r:'Guia completo',img:'/img/produtos/colageno2.png',c:'laranja',tema:'suplementos fitoterapicos'},
-{u:'/passiflora-para-que-serve',t:'Passiflora: para que serve e como tomar',r:'Fitoterápico',img:'/img/produtos/passiflora.png',c:'roxo',tema:'fitoterapicos sono'},
-{u:'/amora-para-menopausa',t:'Amora para menopausa',r:'Saúde da mulher',img:'/img/produtos/amora.png',c:'laranja2',tema:'fitoterapicos mulher'},
-{u:'/oleo-de-melaleuca-nos-dentes',t:'Óleo de melaleuca nos dentes',r:'Saúde bucal',img:'/img/produtos/melaleuca.png',c:'prata',tema:'saude-bucal manipulacao'},
+{u:'/saude-das-articulacoes',t:'Saúde das articulações: o guia completo',r:'Guia completo',img:'/img/capas/articulacoes.jpg',c:'foto',tema:'suplementos fitoterapicos'},
+{u:'/passiflora-para-que-serve',t:'Passiflora: para que serve e como tomar',r:'Fitoterápico',img:'/img/capas/passiflora.jpg',c:'foto',tema:'fitoterapicos sono'},
+{u:'/amora-para-menopausa',t:'Amora para menopausa',r:'Saúde da mulher',img:'/img/capas/amora.jpg',c:'foto',tema:'fitoterapicos mulher'},
+{u:'/oleo-de-melaleuca-nos-dentes',t:'Óleo de melaleuca nos dentes',r:'Saúde bucal',img:'/img/capas/melaleuca.jpg',c:'foto',tema:'saude-bucal manipulacao'},
 {u:'/farmacia-de-manipulacao-itajuba',t:'Farmácia de manipulação em Itajubá',r:'Manipulação',img:'/img/fachada.jpg',c:'foto',tema:'manipulacao'}];
 var aqui=location.pathname.replace(/\.html$/,'').replace(/\/$/,'');var eu=P.filter(function(p){return p.u===aqui})[0];
 var resto=P.filter(function(p){return p!==eu});var sh=function(l){return l.map(function(x){return[Math.random(),x]}).sort(function(a,b){return a[0]-b[0]}).map(function(x){return x[1]})};

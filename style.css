@@ -458,3 +458,11 @@ p,li,summary{text-wrap:pretty}
 .rec b{font-family:"Cal Sans",Inter,sans-serif;font-weight:400;font-size:21px;line-height:1.2;margin:4px 0 12px;text-wrap:balance}
 .rec .vai{margin-top:auto;font-weight:600;font-size:14px;color:var(--wine,#9f1237)}
 @media(max-width:800px){.recs-g{grid-template-columns:1fr}.rec .im{height:140px}}
+
+/* capa do artigo em foto (sem produto) */
+.ahero .r.capa-foto{overflow:hidden}
+.ahero .r.capa-foto img{inset:0;left:0;top:0;width:100%;height:100%;object-fit:cover;transform:none;border-radius:inherit;box-shadow:none}
+.ahero .r.capa-foto .leaf{display:none}
+.ahero .r.capa-foto .float{background:rgba(255,255,255,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.ahero .r.capa-foto .float small{color:#4a3f42;opacity:1}
+.by .av.foto{background:url(/img/wanessa.jpg) center/cover;color:transparent}
