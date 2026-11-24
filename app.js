@@ -77,3 +77,18 @@ Object.keys(mapa).forEach(function(id){io.observe(document.getElementById(id))})
 b.innerHTML='<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 document.body.appendChild(b);b.addEventListener('click',function(){scrollTo({top:0,behavior:'smooth'})});
 var f=function(){b.classList.toggle('on',scrollY>600)};addEventListener('scroll',f,{passive:true});f();})();
+
+// Leia também: 1 artigo do mesmo tema + 2 aleatórios
+(function(){var box=document.querySelector('.recs');if(!box)return;
+var P=[
+{u:'/saude-das-articulacoes',t:'Saúde das articulações: o guia completo',r:'Guia completo',img:'/img/produtos/colageno2.png',c:'laranja',tema:'suplementos fitoterapicos'},
+{u:'/passiflora-para-que-serve',t:'Passiflora: para que serve e como tomar',r:'Fitoterápico',img:'/img/produtos/passiflora.png',c:'roxo',tema:'fitoterapicos sono'},
+{u:'/amora-para-menopausa',t:'Amora para menopausa',r:'Saúde da mulher',img:'/img/produtos/amora.png',c:'laranja2',tema:'fitoterapicos mulher'},
+{u:'/oleo-de-melaleuca-nos-dentes',t:'Óleo de melaleuca nos dentes',r:'Saúde bucal',img:'/img/produtos/melaleuca.png',c:'prata',tema:'saude-bucal manipulacao'},
+{u:'/farmacia-de-manipulacao-itajuba',t:'Farmácia de manipulação em Itajubá',r:'Manipulação',img:'/img/fachada.jpg',c:'foto',tema:'manipulacao'}];
+var aqui=location.pathname.replace(/\.html$/,'').replace(/\/$/,'');var eu=P.filter(function(p){return p.u===aqui})[0];
+var resto=P.filter(function(p){return p!==eu});var sh=function(l){return l.map(function(x){return[Math.random(),x]}).sort(function(a,b){return a[0]-b[0]}).map(function(x){return x[1]})};
+var temas=eu?eu.tema.split(' '):['manipulacao'];
+var rel=sh(resto).sort(function(a,b){var f=function(p){return p.tema.split(' ').filter(function(t){return temas.indexOf(t)>-1}).length};return f(b)-f(a)})[0];
+var lista=[rel].concat(sh(resto.filter(function(p){return p!==rel})).slice(0,2));
+box.innerHTML='<h2 class="cal">Leia também</h2><div class="recs-g">'+lista.map(function(p){return '<a class="rec '+p.c+'" href="'+p.u+'"><span class="im"><img src="'+p.img+'" alt="" loading="lazy"></span><span class="rot">'+p.r+'</span><b>'+p.t+'</b><span class="vai">Ler artigo →</span></a>'}).join('')+'</div>';})();

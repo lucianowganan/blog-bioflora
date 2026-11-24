@@ -17,6 +17,8 @@
       url: 'https://www.farmaciabioflora.com.br/blend-6-magnesios/p' }
     ,{ id: 'passiflora', rotulo: 'Da nossa loja', cor: 'roxo', titulo: 'Passiflora 300mg', texto: 'Extrato da flor do maracujá, para usar à noite.', cta: 'Ver na loja →',
       img: '/img/produtos/passiflora.png', url: 'https://www.farmaciabioflora.com.br/passiflora-maracuja-300mg-com-60-capsulas/p' }
+    ,{ id: 'colageno2', rotulo: 'Da nossa loja', cor: 'laranja', titulo: 'Colágeno Tipo II 40mg', texto: 'Não desnaturado, uma cápsula ao dia.', cta: 'Ver na loja →',
+      img: '/img/produtos/colageno2.png', url: 'https://www.farmaciabioflora.com.br/colageno-tipo-2-generico-uc-ll/p' }
   ];
 
   function el(b, formato) {
@@ -47,6 +49,12 @@
 
   document.querySelectorAll('[data-ad]').forEach(function (slot) {
     var formato = slot.dataset.ad, n = +(slot.dataset.qtd || 1);
+    if (slot.dataset.produtos) { // só produtos do tema da página
+      slot.dataset.produtos.split(' ').forEach(function (id) {
+        var b = BANNERS.filter(function (x) { return x.id === id; })[0]; if (b) slot.appendChild(el(b, formato));
+      });
+      return;
+    }
     for (var k = 0; k < n; k++) slot.appendChild(el(escolher(slot.dataset.excluir), formato));
   });
 })();
